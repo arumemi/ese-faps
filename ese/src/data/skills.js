@@ -4,7 +4,7 @@ export const skills = [
         name: 'JavaScript',
         icon: 'js',
         level: 'Advanced',
-        experience: '3 years'
+        experience: '2 years'
     },
     {
         id : 2,
@@ -25,14 +25,14 @@ export const skills = [
         name: 'CSS3',
         icon: 'css3',
         level: 'Advanced',
-        experience: '3 years'
+        experience: '2 years'
     },
     {
         id : 5,
         name: 'HTML5',
         icon: 'html5',
         level: 'Advanced',
-        experience: '3 years'
+        experience: '2 years'
     },
     { 
         id: 6,
@@ -74,7 +74,7 @@ export const skills = [
         name : 'Git & GitHub',
         icon : 'github',
         level: 'Advanced',
-        experience: '3 years'
+        experience: '2 years'
      },
      {
         id: 12,

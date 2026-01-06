@@ -30,10 +30,10 @@ export const ABOUT_STATS = [
 ];
 
 export const Nav_links = [
-    { id: 'about', path: '/' },
-    { id: 'skills', path: '/skills' },
-    { id: 'projects', path: '/projects' },
-    { id: 'services', path: '/services' },
-    { id: 'contact', path: '/contact' },
+    { id: 'about', path: '/', title: 'About' },
+    { id: 'skills', path: '/skills', title: 'Skills' },
+    { id: 'projects', path: '/projects', title: 'Projects' },
+    { id: 'services', path: '/services', title: 'Services' },
+    { id: 'contact', path: '/contact', title: 'Contact' },
 ];
     
