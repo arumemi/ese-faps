@@ -25,6 +25,9 @@
     background-color: #000000;
     color: #FFFFFF;
     overflow-x: hidden;
+    /* Improve mobile text rendering */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   /*custom scrollbar*/
   ::-webkit-scrollbar {
@@ -108,6 +111,83 @@
 
  
 }
+
+/* Gradient background animations */
+@keyframes float-1 {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0px) translateX(0px) scale(1);
+  }
+  33% {
+    transform: translate(-50%, -50%) translateY(-30px) translateX(20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-50%, -50%) translateY(20px) translateX(-20px) scale(0.95);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translate(33%, -50%) translateY(0px) scale(1);
+  }
+  50% {
+    transform: translate(33%, -50%) translateY(40px) translateX(-30px) scale(1.1);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translate(50%, 50%) translateX(0px) translateY(0px) scale(1);
+  }
+  33% {
+    transform: translate(50%, 50%) translateX(-40px) translateY(20px) scale(1.08);
+  }
+  66% {
+    transform: translate(50%, 50%) translateX(20px) translateY(-20px) scale(1.12);
+  }
+}
+
+.gradient-orb-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  animation: float-1 8s ease-in-out infinite;
+}
+
+.gradient-orb-2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  animation: float-2 10s ease-in-out infinite;
+}
+
+.gradient-orb-3 {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  animation: float-3 6s ease-in-out infinite;
+}
+
+@media (min-width: 640px) {
+  .gradient-orb-1 { width: 800px; height: 800px; }
+  .gradient-orb-2 { width: 700px; height: 700px; }
+  .gradient-orb-3 { width: 750px; height: 750px; }
+}
+
+@media (min-width: 768px) {
+  .gradient-orb-1 { width: 1000px; height: 1000px; }
+  .gradient-orb-2 { width: 900px; height: 900px; }
+  .gradient-orb-3 { width: 950px; height: 950px; }
+}
+
 /*utiliies classes*/
 .animate-fade-in {
   animation: fadeIn 1s ease-in-out;
@@ -166,4 +246,40 @@
     overflow: hidden;
   }
 
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    /* Improve tap targets for mobile */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Optimize font sizes for readability on small screens */
+    body {
+      font-size: 16px;
+    }
+    
+    /* Prevent horizontal scroll on mobile */
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    
+    /* Improve touch scrolling */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Better spacing for mobile cards and sections */
+    section {
+      scroll-margin-top: 80px;
+    }
+  }
 
+  /* Extra small devices */
+  @media (max-width: 480px) {
+    /* Smaller scrollbar on mobile */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+  }

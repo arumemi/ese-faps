@@ -41,27 +41,27 @@ const Navbar = () => {
       }`}
       style={{ transform: "translate3d(0,0,1)" }}
     >
-      <div className="max-w-/[1320px] mx-auto px-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
           {/* logo */}
-          <div className="flex items-center gap-6 ml-8">
-            <Code className="text-2xl font-bold text-amber-400" />
+          <div className="flex items-center gap-3 md:gap-6">
+            <Code className="text-xl md:text-2xl font-bold text-amber-400" />
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className=" font-bold bg-linear-to-r text-2xl from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity text-bold "
+              className=" font-bold bg-linear-to-r text-xl md:text-2xl from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity text-bold "
               
             >
-              {PERSONAL_INFO.name.split(" ")[0]}
+              {PERSONAL_INFO.name.split(" 1")[0]}
             </button>
           </div>
           {/* Desktop Navigation */}
 
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-4 lg:gap-7">
             {Nav_links.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavLinkClick(link.id)}
-                className={`text-base font-meduim transition-all duration-300 mx-4
+                className={`text-sm lg:text-base font-medium transition-all duration-300 mx-2 lg:mx-4
                   ${
                     activeSection === link.id
                       ? "text-amber-400"
@@ -76,7 +76,7 @@ const Navbar = () => {
             {/* cta button */}
             <button
               onClick={() => handleNavLinkClick("contact")}
-              className="px-4 py-2 bg-white text-[#121212] text-base font-medium  rounded-[17px] border border-white hover:opacity-90 transition-all duration-300"
+              className="px-3 lg:px-4 py-2 bg-white text-[#121212] text-sm lg:text-base font-medium rounded-[17px] border border-white hover:opacity-90 transition-all duration-300"
             >
               Hire Me
             </button>
@@ -94,13 +94,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-full left-0 w-full bg-black shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0'}`}>
-          <div className="flex flex-col items-center py-4">
+        <div className={`md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden border-t border-amber-400/20 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="flex flex-col items-stretch px-4 py-4">
           {Nav_links.map((link) => (
             <button
               key={link.id}
               onClick={() => handleNavLinkClick(link.id)}
-              className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300
+              className={`block w-full text-center px-4 py-3 rounded-lg text-base font-medium transition-all duration-300
                   ${
                     activeSection === link.id
                       ? "text-amber-400"
@@ -113,7 +113,7 @@ const Navbar = () => {
           ))}
           <button 
             onClick={() => handleNavLinkClick('contact')} 
-            className="w-full px-7 py-3 text-black bg-white  font-medium text-base rounded-[17px] border border-white hover:opacity-90 transition-all duration-300 mt-3"
+            className="w-full px-7 py-3 text-black bg-white font-medium text-base rounded-lg border border-white hover:opacity-90 transition-all duration-300 mt-2"
           >
             Hire Me
           </button>
