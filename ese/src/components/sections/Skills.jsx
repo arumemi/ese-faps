@@ -32,8 +32,15 @@ const Skills = () => {
             skills.find(s => s.name === 'Responsive Design'),
         ].filter(Boolean),
     }
+
   return (
-    <div>Skills</div>
+    <div>
+        <section id="skills" className="py-12 bg-gray-100 dark:bg-gray-900">
+            <div className="container mx-auto px-4">
+                <h2 className="text-5xl text-mono font-bold mb-8 text-center text-gray-800 dark:text-gray-200"> S K I L L S</h2>
+            </div>
+        </section>
+    </div>
   )
 }
 
