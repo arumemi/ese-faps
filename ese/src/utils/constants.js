@@ -18,23 +18,24 @@ export const SOCIAL_LINKS = {
     instagram: 'https://www.instagram.com/easy_ese_1/',
 };
 export const STATS = [
-    { label: 'Years of Experience', value: '1+' },
+    { label: 'Years of Experience', value: '2+' },
     { label: 'Projects Completed', value: '8+' },
     { label: 'Happy Clients', value: '5+' },
     { label: 'Technologies Used', value: '10+' },
 ];
 
 export const ABOUT_STATS = [
-    { label: 'Happy Clients', value: '5+' },
-    { label: 'Code Commit', value: '400+' },
-    { label: 'Years of Experience', value: '1+' },
-    { label: 'Technologies Used', value: '10+' },
-    {label: 'clean codes', value: '100%'},
-    {label: 'performance', value: '99.9%'},
+    { label: '', value: 'Expertise' },
+    { label: '', value: 'Clean Code' },
+    { label: '', value: 'Performance' },
+    { label: '', value: 'Clients Satisfied' },
+    {label: '', value: '24/7'},
+    {label: '', value: 'Fast Delivery'},
 ];
 
 export const Nav_links = [
     { id: 'about', path: '/', title: 'About' },
+     { id: 'technology', path: '/technology', title: 'Technology'},
     { id: 'skills', path: '/skills', title: 'Skills'},
     { id: 'projects', path: '/projects', title: 'Projects' },
     { id: 'services', path: '/services', title: 'Services' },

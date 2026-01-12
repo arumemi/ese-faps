@@ -1,4 +1,4 @@
-export const skills = [
+export const     Technology = [
     {
         id : 1,
         name: 'JavaScript',

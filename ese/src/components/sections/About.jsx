@@ -67,7 +67,11 @@ const About = () => {
               </div>
             </FadeIn>
           </div>
-    
+
+
+          {/** */}
+
+                
         </div>
     </section>
   )

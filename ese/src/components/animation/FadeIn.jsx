@@ -1,10 +1,12 @@
 import React from 'react'
 
-const FadeIn = ({children, delay = 0, duration=500, threshold=0.1}) => {
+const FadeIn = ({children, delay = 0, duration = 500, threshold = 0.1}) => {
     const [isVisible, setIsVisible] = React.useState(false);
     const elementRef = React.useRef(null);
 
     React.useEffect(() => {
+        const currentElement = elementRef.current;
+        
         const observer = new IntersectionObserver(
             (entries) => {
               //Trigger animation when elements come into view
@@ -14,29 +16,29 @@ const FadeIn = ({children, delay = 0, duration=500, threshold=0.1}) => {
                     }
                 })
             },
-            { threshold: threshold, rootMargin: '0px 0px -50px 0px' } //trigers slightly before
+            { threshold: threshold, rootMargin: '0px 0px -50px 0px' } //triggers slightly before
         );
 
-        if (elementRef.current) {
-            observer.observe(elementRef.current);
+        if (currentElement) {
+            observer.observe(currentElement);
         }
 
         return () => {
-            if (elementRef.current) {
-                observer.unobserve(elementRef.current);
+            if (currentElement) {
+                observer.unobserve(currentElement);
             }
         };
     }, [threshold, isVisible]);
 
   return (
-    <div ref={elementRef}
-    className={`transition-opacity duration-${duration} ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+    <div 
+      ref={elementRef}
+      className={`transition-all ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
       style={{
-        animationDelay: isVisible ? `${delay}ms` : '0ms',
-        animationDuration: `${duration}ms`,
-        animationFillMode: 'both'
+        transitionDelay: isVisible ? `${delay}ms` : '0ms',
+        transitionDuration: `${duration}ms`,
       }}
-      >
+    >
       {children}
     </div>
   )
