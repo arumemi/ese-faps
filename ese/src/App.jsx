@@ -6,6 +6,7 @@ import About from './components/sections/About'
 import Technolgy from './components/sections/Technolgy'
 import Skills from './components/sections/Skills'
 import Project from './components/sections/Project'
+import Service from './components/sections/Services'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Technolgy/>
           <Skills/>
           <Project/>
+          <Service/>
 
          
         </main>

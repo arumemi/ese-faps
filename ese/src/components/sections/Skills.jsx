@@ -95,9 +95,14 @@ const Skills = () => {
                           <div className="flex items-center justify-between mb-2">
                             <div className="flex items-center gap-2">
                               <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-lime-400 group-hover:scale-110 transition-transform" />
-                              <span className="text-sm md:text-base text-gray-300 font-medium group-hover:text-lime-400 transition-colors">
-                                {skill.name}
-                              </span>
+                              <div className="flex flex-col">
+                                <span className="text-sm md:text-base text-gray-300 font-medium group-hover:text-lime-400 transition-colors">
+                                  {skill.name}
+                                </span>
+                                <span className="text-xs text-gray-500">
+                                  {proficiency}%
+                                </span>
+                              </div>
                             </div>
                             <span
                               className={`px-2 py-1 rounded-full text-[10px] font-medium border ${getLevelColor(

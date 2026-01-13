@@ -25,12 +25,12 @@ export const STATS = [
 ];
 
 export const ABOUT_STATS = [
-    { label: '', value: 'Expertise' },
-    { label: '', value: 'Clean Code' },
-    { label: '', value: 'Performance' },
-    { label: '', value: 'Clients Satisfied' },
-    {label: '', value: '24/7'},
-    {label: '', value: 'Fast Delivery'},
+    { label: 'Focused on React & Modern UI development', value:'Front-End Specialist' },
+    { label: 'Pixel-perfect layouts & smooth interactions', value: 'Detail Oriented' },
+    { label: 'Constantly learning new tools & best practices', value: 'Always Improving' },
+    { label: 'Clear communication & collaboration', value: 'Easy to Work With' },
+   { label: 'Delivers projects on time', value: 'Reliable' },
+    {label: 'Reusable components & clean architecture', value: 'Maintainable Code' },
 ];
 
 export const Nav_links = [

@@ -4,7 +4,6 @@ import { Code2, Sparkles, Zap, Database, Smartphone, Figma, Github } from "lucid
 import { SiJavascript, SiReact, SiNodedotjs, SiCss3, SiHtml5, SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiRedux, SiVite } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import FadeIn from "../animation/FadeIn";
-import RadialGradientBackground from "../background/RadiaGradientBackground";
 
 const Technolgy = () => {
   // Icon mapping
@@ -31,7 +30,7 @@ const Technolgy = () => {
       id="technology"
       className="relative min-h-screen py-12 md:py-20 bg-black overflow-hidden"
     >
-      <RadialGradientBackground variant="skills" />
+     
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

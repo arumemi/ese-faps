@@ -1,15 +1,14 @@
-
 import React from 'react'
-import {Download, Code2, Sparkles} from 'lucide-react'
+import {Download, Code2, Sparkles, Target, Eye, TrendingUp, Users, Clock, FileCode} from 'lucide-react'
 import {PERSONAL_INFO, ABOUT_STATS} from '../../utils/constants'
-import RadialGradientBackground from '../background/RadiaGradientBackground'
+
 import FadeIn from '../animation/FadeIn'
 
 
 const About = () => {
   return (
     <section id="about" className='relative min-h-screen py-12 md:py-20 bg-black overflow-hidden'>
-        <RadialGradientBackground variant="about" />
+       
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           {/**main grid */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start lg:items-center'>
@@ -52,18 +51,37 @@ const About = () => {
 
             {/**right column - stats */}
             <FadeIn delay={300}>
-              <div className='grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mt-8 lg:mt-0'>
-                {ABOUT_STATS.map((stat, index) => (
-                  <div key={index} className='relative p-4 md:p-6 border border-lime-500/10 rounded-xl hover:border-lime-500/30 transition-all duration-300 hover:bg-lime-500/5 group'>
-                    <div className='absolute left-0 top-4 md:top-6 w-1 h-8 md:h-12 bg-linear-to-b from-lime-400 via-cyan-400 to-transparent rounded-full'></div>
-                    <div className='text-2xl sm:text-3xl md:text-4xl font-bold text-lime-400 mb-1 md:mb-2 font-mono group-hover:scale-110 transition-transform'>
-                      {stat.value}
+              <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 mt-8 lg:mt-0'>
+                {ABOUT_STATS.map((stat, index) => {
+                  // Icon mapping based on index or value
+                  const iconMap = [
+                    Target,      // Front-End Specialist
+                    Eye,         // Detail Oriented
+                    TrendingUp,  // Always Improving
+                    Users,       // Easy to Work With
+                    Clock,       // Reliable
+                    FileCode     // Maintainable Code
+                  ];
+                  const IconComponent = iconMap[index] || Code2;
+                  
+                  return (
+                    <div key={index} className='relative p-4 md:p-5 border border-lime-500/10 rounded-xl hover:border-lime-500/30 transition-all duration-300 hover:bg-lime-500/5 group bg-white/[0.02]'>
+                      <div className='flex items-start gap-3 mb-3'>
+                        <div className='flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-lime-400/10 border border-lime-400/20 flex items-center justify-center group-hover:bg-lime-400/20 group-hover:scale-110 transition-all duration-300'>
+                          <IconComponent className='w-5 h-5 md:w-6 md:h-6 text-lime-400' />
+                        </div>
+                        <div className='flex-1 min-w-0'>
+                          <h3 className='text-base sm:text-lg md:text-xl font-semibold text-white mb-1.5 leading-tight'>
+                            {stat.value}
+                          </h3>
+                          <p className='text-xs sm:text-sm text-gray-400 leading-relaxed'>
+                            {stat.label}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <p className='text-xs sm:text-sm text-gray-400 leading-snug'>
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </FadeIn>
           </div>
