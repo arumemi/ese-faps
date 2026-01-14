@@ -44,12 +44,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
           {/* logo */}
-          <div className="flex items-center gap-3 md:gap-6">
-            <Code className="text-xl md:text-2xl font-bold text-amber-400" />
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/30">
+              <Code className="w-5 h-5 text-primary" />
+            </div>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className=" font-bold bg-linear-to-r text-xl md:text-2xl from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity text-bold "
-              
+              className="text-xl  md:text-2xl font-bold text-amber-400 hover:text-primary transition-colors"
             >
               {PERSONAL_INFO.name.split(" 1")[0]}
             </button>
