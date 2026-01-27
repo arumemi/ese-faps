@@ -48,13 +48,13 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: 'Telefone',
       value: PERSONAL_INFO.phone,
       href: `tel:${PERSONAL_INFO.phone}`
     },
     {
       icon: MapPin,
-      label: 'Location',
+      label: 'Localização',
       value: PERSONAL_INFO.location,
       href: null
     }
@@ -92,13 +92,13 @@ const Contact = () => {
           <div className='text-center mb-16'>
             <div className='flex items-center justify-center gap-2 bg-primary/10 mb-4 border border-primary/30 rounded-full px-4 py-2 mx-auto w-max'>
               <Mail className='w-5 h-5 text-primary'/>
-              <span className='text-primary font-medium'>Get In Touch</span>
+              <span className='text-primary font-medium'>Entre em Contato</span>
             </div>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              Let's Work Together
+              Vamos Trabalhar Juntos
             </h2>
             <p className='text-gray-400 text-lg max-w-2xl mx-auto'>
-              Have a project in mind? I'd love to hear from you. Send me a message and I'll respond as soon as possible.
+              Tem um projeto em mente? Eu adoraria ouvir você. Envie-me uma mensagem e responderei o mais rápido possível.
             </p>
           </div>
         </FadeIn>
@@ -108,7 +108,7 @@ const Contact = () => {
           <div className='lg:col-span-1 space-y-6'>
             <FadeIn delay={100}>
               <div className='bg-gray-900/50 border border-gray-800 rounded-lg p-6'>
-                <h3 className='text-xl font-semibold text-white mb-6'>Contact Information</h3>
+                <h3 className='text-xl font-semibold text-white mb-6'>Informações de Contato</h3>
                 <div className='space-y-4'>
                   {contactInfo.map((item, index) => (
                     <div key={index} className='flex items-start gap-4'>
@@ -136,7 +136,7 @@ const Contact = () => {
 
             <FadeIn delay={200}>
               <div className='bg-gray-900/50 border border-gray-800 rounded-lg p-6'>
-                <h3 className='text-xl font-semibold text-white mb-6'>Follow Me</h3>
+                <h3 className='text-xl font-semibold text-white mb-6'>Me Siga</h3>
                 <div className='flex gap-3'>
                   {socialLinks.map((social, index) => (
                     <a
@@ -162,15 +162,15 @@ const Contact = () => {
                 {isSubmitted ? (
                   <div className='flex flex-col items-center justify-center py-12'>
                     <CheckCircle className='w-16 h-16 text-primary mb-4'/>
-                    <h3 className='text-2xl font-semibold text-white mb-2'>Message Sent!</h3>
-                    <p className='text-gray-400 text-center'>Thank you for reaching out. I'll get back to you soon.</p>
+                    <h3 className='text-2xl font-semibold text-white mb-2'>Mensagem Enviada!</h3>
+                    <p className='text-gray-400 text-center'>Obrigado por entrar em contato. Responderei em breve.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className='space-y-6'>
                     <div className='grid md:grid-cols-2 gap-6'>
                       <div>
                         <label htmlFor='name' className='block text-sm font-medium text-gray-300 mb-2'>
-                          Your Name
+                          Seu Nome
                         </label>
                         <input
                           type='text'
@@ -180,12 +180,12 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all'
-                          placeholder='John Doe'
+                          placeholder='João Silva'
                         />
                       </div>
                       <div>
                         <label htmlFor='email' className='block text-sm font-medium text-gray-300 mb-2'>
-                          Your Email
+                          Seu Email
                         </label>
                         <input
                           type='email'
@@ -195,13 +195,13 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all'
-                          placeholder='john@example.com'
+                          placeholder='joao@exemplo.com'
                         />
                       </div>
                     </div>
                     <div>
                       <label htmlFor='subject' className='block text-sm font-medium text-gray-300 mb-2'>
-                        Subject
+                        Assunto
                       </label>
                       <input
                         type='text'
@@ -211,12 +211,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all'
-                        placeholder='Project Inquiry'
+                        placeholder='Consulta de Projeto'
                       />
                     </div>
                     <div>
                       <label htmlFor='message' className='block text-sm font-medium text-gray-300 mb-2'>
-                        Message
+                        Mensagem
                       </label>
                       <textarea
                         id='message'
@@ -226,14 +226,14 @@ const Contact = () => {
                         required
                         rows='6'
                         className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none'
-                        placeholder='Tell me about your project...'
+                        placeholder='Fale-me sobre seu projeto...'
                       ></textarea>
                     </div>
                     <button
                       type='submit'
                       className='w-full md:w-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2'
                     >
-                      <span>Send Message</span>
+                      <span>Enviar Mensagem</span>
                       <Send className='w-5 h-5'/>
                     </button>
                   </form>

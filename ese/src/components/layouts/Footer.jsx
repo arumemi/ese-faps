@@ -24,10 +24,10 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { label: 'About', id: 'about' },
-    { label: 'Skills', id: 'skills' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Services', id: 'services' }
+    { label: 'Sobre', id: 'about' },
+    { label: 'Habilidades', id: 'skills' },
+    { label: 'Projetos', id: 'projects' },
+    { label: 'Serviços', id: 'services' }
   ]
 
   return (
@@ -84,7 +84,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -101,18 +101,18 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <h3 className="text-white font-semibold mb-4">Serviços</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400 text-sm">Web Development</li>
-              <li className="text-gray-400 text-sm">Mobile App Development</li>
-              <li className="text-gray-400 text-sm">UI/UX Design</li>
-              <li className="text-gray-400 text-sm">Performance Optimization</li>
+              <li className="text-gray-400 text-sm">Desenvolvimento Web</li>
+              <li className="text-gray-400 text-sm">Desenvolvimento de Aplicativos Móveis</li>
+              <li className="text-gray-400 text-sm">Design UI/UX</li>
+              <li className="text-gray-400 text-sm">Otimização de Desempenho</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <h3 className="text-white font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -146,8 +146,8 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} {PERSONAL_INFO.name}. All rights reserved. Made with{' '}
-              <Heart className="inline w-4 h-4 text-red-500 fill-red-500" /> in Brazil
+              © {currentYear} {PERSONAL_INFO.name}. Todos os direitos reservados. Feito com{' '}
+              <Heart className="inline w-4 h-4 text-red-500 fill-red-500" /> no Brasil
             </p>
             <button
               onClick={scrollToTop}

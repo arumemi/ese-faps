@@ -88,14 +88,14 @@ const Project = () => {
           <div className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/10 border border-primary/30 mb-4 sm:mb-6 text-white rounded-full">
               <Briefcase className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-              <span className="text-xs sm:text-sm font-medium text-primary">My Work</span>
+              <span className="text-xs sm:text-sm font-medium text-primary">Meu Trabalho</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-3 sm:mb-4 px-4">
-              Featured Projects
+              Projetos Em Destaque
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto px-4">
-              Explore a selection of my recent projects, showcasing my skills in
-              web development and design.
+              Explore uma seleção dos meus projetos recentes, mostrando minhas habilidades em
+              desenvolvimento web e design.
             </p>
           </div>
         </FadeIn>

@@ -79,7 +79,7 @@ const Navbar = () => {
               onClick={() => handleNavLinkClick("contact")}
               className="px-3 lg:px-4 py-2 bg-white text-[#121212] text-sm lg:text-base font-medium rounded-[17px] border border-white hover:opacity-90 transition-all duration-300"
             >
-              Hire Me
+              Contrate-me
             </button>
           </div>
           {/*mobile menu btn */}

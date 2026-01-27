@@ -39,7 +39,7 @@ const Technolgy = () => {
             <div className="inline-flex items-center gap-2.5 px-4 py-2 md:px-5 md:py-2.5 border border-lime-500/20 rounded-full hover:bg-lime-500/10 transition-colors bg-lime-500/5 mb-4">
               <Zap className="w-3 h-3 md:w-4 md:h-4 text-lime-400" />
               <span className="text-xs md:text-sm text-lime-300 font-medium">
-                Technical Skills
+                Habilidades Técnicas
               </span>
               <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 animate-pulse" />
             </div>
@@ -47,14 +47,14 @@ const Technolgy = () => {
 
           <FadeIn delay={100}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4">
-              Technologies & Tools
+              Tecnologias e Ferramentas
             </h2>
           </FadeIn>
 
           <FadeIn delay={200}>
             <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-              An overview of my technical expertise and proficiency
-              levels
+              Uma visão geral de minha experiência técnica e níveis de
+              proficiência
             </p>
           </FadeIn>
         </div>

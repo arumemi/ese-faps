@@ -31,13 +31,13 @@ const Service = () => {
           <div className='text-center mb-16'>
             <div className='flex items-center justify-center gap-2 bg-primary/10 mb-4 border border-primary/30 rounded-full px-4 py-2 mx-auto w-max'>
               <Wrench className='w-5 h-5 text-primary'/>
-              <span className='text-primary font-medium'>What I Offer</span>
+              <span className='text-primary font-medium'>O Que Ofereço</span>
             </div>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              Built for innovation. Designed for results
+              Construído para inovação. Projetado para resultados
             </h2>
             <p className='text-gray-400 text-lg max-w-2xl mx-auto'>
-              I offer a wide range of services to help businesses establish a strong online presence and achieve their digital goals.
+              Ofereço uma ampla gama de serviços para ajudar empresas a estabelecer uma forte presença online e atingir seus objetivos digitais.
             </p>
           </div>
         </FadeIn>

@@ -2,13 +2,13 @@ import { Stars } from "lucide-react";
 
 export const PERSONAL_INFO = {
     name: 'Ese Fapohunda',
-    title: 'React Developer & UI/UX Enthusiast || Open to Opportunities',
+    title: 'Desenvolvedor React & Entusiasta UI/UX || Aberto a Oportunidades',
     email : 'esefapohunda@gmail.com',
     phone : '+55 (48) 9181-7031',
-    location : 'Florianópolis, Brazil',
-    tagline : 'Building seamless web experiences with React.js',
+    location : 'Florianópolis, Brasil',
+    tagline : 'Criando experiências web perfeitas com React.js',
     resume: '/files/Ese_Fapohunda_Resume.pdf',
-    bio: [`Passionate React developer with 1+ years of experience in crafting dynamic and responsive web applications. Adept at translating design mockups into high-quality code, optimizing performance, and ensuring cross-browser compatibility. Committed to continuous learning and staying updated with the latest industry trends to deliver cutting-edge solutions.`],
+    bio: [`Desenvolvedor React apaixonado com 1+ anos de experiência na criação de aplicações web dinâmicas e responsivas. Hábil em traduzir mockups de design em código de alta qualidade, otimizar desempenho e garantir compatibilidade entre navegadores. Comprometido com aprendizado contínuo e atualização com as últimas tendências da indústria para entregar soluções de ponta.`],
 };
 
 export const SOCIAL_LINKS = {
@@ -18,27 +18,27 @@ export const SOCIAL_LINKS = {
     instagram: 'https://www.instagram.com/easy_ese_1/',
 };
 export const STATS = [
-    { label: 'Years of Experience', value: '2+' },
-    { label: 'Projects Completed', value: '8+' },
-    { label: 'Happy Clients', value: '5+' },
-    { label: 'Technologies Used', value: '10+' },
+    { label: 'Anos de Experiência', value: '2+' },
+    { label: 'Projetos Concluídos', value: '8+' },
+    { label: 'Clientes Satisfeitos', value: '5+' },
+    { label: 'Tecnologias Usadas', value: '10+' },
 ];
 
 export const ABOUT_STATS = [
-    { label: 'Focused on React & Modern UI development', value:'Front-End Specialist' },
-    { label: 'Pixel-perfect layouts & smooth interactions', value: 'Detail Oriented' },
-    { label: 'Constantly learning new tools & best practices', value: 'Always Improving' },
-    { label: 'Clear communication & collaboration', value: 'Easy to Work With' },
-   { label: 'Delivers projects on time', value: 'Reliable' },
-    {label: 'Reusable components & clean architecture', value: 'Maintainable Code' },
+    { label: 'Focado em desenvolvimento React & UI moderno', value:'Especialista em Front-End' },
+    { label: 'Layouts perfeitos em pixels & interações suaves', value: 'Orientado por Detalhes' },
+    { label: 'Aprendendo constantemente novas ferramentas e melhores práticas', value: 'Sempre Melhorando' },
+    { label: 'Comunicação clara e colaboração', value: 'Fácil de Trabalhar' },
+   { label: 'Entrega projetos no prazo', value: 'Confiável' },
+    {label: 'Componentes reutilizáveis e arquitetura limpa', value: 'Código Sustentável' },
 ];
 
 export const Nav_links = [
-    { id: 'about', path: '/', title: 'About' },
-     { id: 'technology', path: '/technology', title: 'Technology'},
-    { id: 'skills', path: '/skills', title: 'Skills'},
-    { id: 'projects', path: '/projects', title: 'Projects' },
-    { id: 'services', path: '/services', title: 'Services' },
-    { id: 'contact', path: '/contact', title: 'Contact' },
+    { id: 'about', path: '/', title: 'Sobre' },
+     { id: 'technology', path: '/technology', title: 'Tecnologia'},
+    { id: 'skills', path: '/skills', title: 'Habilidades'},
+    { id: 'projects', path: '/projects', title: 'Projetos' },
+    { id: 'services', path: '/services', title: 'Serviços' },
+    { id: 'contact', path: '/contact', title: 'Contato' },
 ];
     

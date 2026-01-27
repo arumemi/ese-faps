@@ -17,14 +17,14 @@ const About = () => {
               <FadeIn delay={60}>
                 <div className='inline-flex items-center gap-2.5 px-4 py-2 md:px-5 md:py-2.5 border border-lime-500/20 rounded-full hover:bg-lime-500/10 transition-colors w-fit bg-lime-500/5'>
                   <Code2 className='w-3 h-3 md:w-4 md:h-4 text-lime-400' />
-                  <span className='text-xs md:text-sm text-lime-300 font-medium'>Full-Stack Developer</span>
+                  <span className='text-xs md:text-sm text-lime-300 font-medium'>Desenvolvedor Full-Stack</span>
                   <Sparkles className='w-3 h-3 md:w-4 md:h-4 text-yellow-400 animate-pulse' />
                 </div>
               </FadeIn>
               
               <FadeIn delay={100}>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight'>
-                  Crafting Awesome Digital Experiences
+                  Criando Experiências Digitais Incríveis
                 </h2>
               </FadeIn>
               
@@ -44,7 +44,7 @@ const About = () => {
                   className='inline-flex items-center justify-center gap-3 bg-lime-400 hover:bg-lime-300 text-black rounded-lg px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-lime-400/20 w-full sm:w-fit group'
                 >
                   <Download className='w-4 h-4 md:w-5 md:h-5 group-hover:animate-bounce' />
-                  <span>Download Resume</span>
+                  <span>Baixar Currículo</span>
                 </button>
               </FadeIn>
             </div>

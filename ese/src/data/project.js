@@ -1,10 +1,10 @@
 export const projects = [ 
   {
     id: 1,
-    title: 'Schooling Platform',
-    description: 'full-stack web application schooling platform',
+    title: 'Plataforma de Educação',
+    description: 'aplicação web full-stack para plataforma de educação',
     imageUrl: '/images/sch-img.jpeg',
-    category: 'Web Apps',
+    category: 'Aplicativos Web',
     technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
     projectUrl: 'https://www.rockstarstudyabroad.com/',
     demoUrl: 'https://demo.example.com/project-one',
@@ -12,8 +12,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'Project Two',
-    description: 'e-commerce website with payment integration',
+    title: 'Projeto Dois',
+    description: 'site de e-commerce com integração de pagamento',
     imageUrl: '/images/project2.png',
     category: 'E-commerce',
     technologies: ['Vue', 'Firebase', 'Stripe'],
@@ -24,10 +24,10 @@ export const projects = [
 
   {
     id: 3,
-    title: 'Project Three',
-    description: 'mobile app for task management',
+    title: 'Projeto Três',
+    description: 'aplicativo móvel para gerenciamento de tarefas',
     imageUrl: '/images/project3.png',
-    category: 'Mobile Apps',
+    category: 'Aplicativos Móveis',
     technologies: ['React Native', 'Redux'],
     projectUrl: 'https://example.com/project-three',
   
@@ -35,10 +35,10 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Project Four',
-    description: 'personal blog with CMS',
+    title: 'Projeto Quatro',
+    description: 'blog pessoal com CMS',
     imageUrl: '/images/project4.png',
-    category: 'Web Development',
+    category: 'Desenvolvimento Web',
     technologies: ['Gatsby', 'GraphQL', 'Contentful'],
     projectUrl: 'https://example.com/project-four',
     
@@ -46,8 +46,8 @@ export const projects = [
   },
   {
     id: 5,
-    title: 'Project Five',
-    description: 'real-time chat application',
+    title: 'Projeto Cinco',
+    description: 'aplicação de bate-papo em tempo real',
     imageUrl: '/images/project5.png',
     category: 'Full-Stack',
     technologies: ['Socket.io', 'Node.js', 'Express'],
@@ -57,10 +57,10 @@ export const projects = [
   },
   {
     id: 6,
-    title: 'Project Six',
-    description: 'portfolio website with animations',
+    title: 'Projeto Seis',
+    description: 'site de portfólio com animações',
     imageUrl: '/images/project6.png',
-    category: 'UI Components',
+    category: 'Componentes UI',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     projectUrl: 'https://example.com/project-six',
    
@@ -69,9 +69,9 @@ export const projects = [
 
 ];
 export const categories = [
-  'All',
-  'Web Apps',
-  'Mobile Apps',
+  'Todos',
+  'Aplicativos Web',
+  'Aplicativos Móveis',
   'E-commerce',
   
   'Full-Stack',

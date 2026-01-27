@@ -36,16 +36,15 @@ const Hero = () => {
 
             <FadeIn delay={100}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight mb-4 md:mb-6">
-                Front-end Developer <br className="hidden sm:block" /> & UI
-                Developer
+                Desenvolvedor Front-end <br className="hidden sm:block" /> & Design<br/>UI
               </h1>
             </FadeIn>
 
             <FadeIn delay={200}>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed">
-                Building modern, scalable application with React, Next.js,
-                Tailwind CSS, Node.js, and lots more cutting-edge technologies.
-                Transforming ideas into reality.
+                Construindo aplicações modernas e escaláveis com React, Next.js,
+                Tailwind CSS, Node.js e muito mais tecnologias de ponta.
+                Transformando ideias em realidade.
               </p>
             </FadeIn>
 
@@ -54,7 +53,7 @@ const Hero = () => {
                 onClick={() => scrollToSection("contacts")}
                 className="inline-flex items-center justify-center gap-2 mb-6 md:mb-12 group px-6 py-3 text-sm md:text-base bg-lime-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors w-full sm:w-auto"
               >
-                Contact Me
+                Entre em Contato
               </button>
             </FadeIn>
 

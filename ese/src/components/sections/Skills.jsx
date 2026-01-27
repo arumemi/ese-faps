@@ -7,7 +7,7 @@ import RadialGradientBackground from "../background/RadiaGradientBackground";
 const Skills = () => {
   //category skills mapping
   const skillCategories = {
-    "Frontend Development": [
+    "Desenvolvimento Front-End": [
       Technology.find((s) => s.name === "JavaScript"),
       Technology.find((s) => s.name === "React.js"),
       Technology.find((s) => s.name === "TypeScript"),
@@ -22,7 +22,7 @@ const Skills = () => {
       Technology.find((s) => s.name === "MongoDB"),
       Technology.find((s) => s.name === "REST API"),
     ].filter(Boolean),
-    "Tools & Platforms": [
+    "Ferramentas & Plataformas": [
       Technology.find((s) => s.name === "Git & GitHub"),
       Technology.find((s) => s.name === "Figma"),
       Technology.find((s) => s.name === "Vite"),
@@ -33,9 +33,9 @@ const Skills = () => {
   // get proficiency percentage
   const getProficiencyPercentage = (level) => {
     const levels = {
-      Expert: 95,
-      Advanced: 80,
-      Intermediate: 65,
+      Especialista: 95,
+      Avançado: 80,
+      Intermediário: 65,
     };
     return levels[level] || 50;
   };
@@ -43,9 +43,9 @@ const Skills = () => {
   //get levels color
   const getLevelColor = (level) => {
     const colors = {
-      Expert: "text-[#8DFF69] bg-[#8DFF69]/20 border-[#8DFF69]/40",
-      Advanced: "text-cyan-400 bg-cyan-500/20 border-cyan-500/40",
-      Intermediate: "text-emerald-400 bg-emerald-500/20 border-emerald-500/40",
+      Especialista: "text-[#8DFF69] bg-[#8DFF69]/20 border-[#8DFF69]/40",
+      Avançado: "text-cyan-400 bg-cyan-500/20 border-cyan-500/40",
+      Intermediário: "text-emerald-400 bg-emerald-500/20 border-emerald-500/40",
     };
     return colors[level] || "text-gray-500 bg-gray-500/20 border-gray-500/40";
   };
@@ -62,10 +62,10 @@ const Skills = () => {
         <FadeIn delay={0}>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4">
-              Skills & Expertise
+              Habilidades e Expertise
             </h2>
             <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-              Organized view of my technical skills across different domains
+              Visão organizada das minhas habilidades técnicas em diferentes domínios
             </p>
           </div>
         </FadeIn>
