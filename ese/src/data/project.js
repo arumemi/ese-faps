@@ -1,8 +1,10 @@
+import techPix from '../assets/tech_pix.jpeg'
+
 export const projects = [ 
   {
     id: 1,
     title: 'Plataforma de Educação',
-    description: 'aplicação web full-stack para plataforma de educação',
+    description: 'Plataforma de intercâmbio estudantil',
     imageUrl: '/images/sch-img.jpeg',
     category: 'Aplicativos Web',
     technologies: ['HTML', 'CSS', 'JAVASCRIPT'],
@@ -12,14 +14,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'Projeto Dois',
-    description: 'site de e-commerce com integração de pagamento',
-    imageUrl: '/images/project2.png',
-    category: 'E-commerce',
-    technologies: ['Vue', 'Firebase', 'Stripe'],
-    projectUrl: 'https://example.com/project-two',
+    title: 'Tech-blog',
+    description: 'Plataforma de blog de tecnologia com sistema de autenticação',
+    imageUrl: techPix,
+    category: 'Full-Stack',
+    technologies: ['Next.js', 'React', 'Prisma', 'Tailwind CSS', 'PostgreSQL'],
+    projectUrl: 'https://tech-blog-i77h.vercel.app/',
     
-    githubUrl: 'https://github.com/example/project-two',
+    githubUrl: 'https://github.com/arumemi/Tech_Blog ',
   },
 
   {

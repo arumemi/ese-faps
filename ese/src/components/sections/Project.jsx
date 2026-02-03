@@ -18,12 +18,12 @@ import {
 import ProjectCard from "../ui/ProjectCard";
 
 const Project = () => {
-  const [activateCategory, setActivateCategory] = React.useState("All");
+  const [activateCategory, setActivateCategory] = React.useState("Todos");
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const scrollContainerRef = React.useRef(null);
 
   const filteredProjects =
-    activateCategory === "All"
+    activateCategory === "Todos"
       ? Projects
       : Projects.filter((project) => project.category === activateCategory);
 
@@ -67,9 +67,9 @@ const Project = () => {
 
   //CATEGORY ICON MAPPING
   const categoryIcons = {
-    All: Target,
-    "Web Apps": Globe,
-    "UI Components": Palette,
+    Todos: Target,
+    "Aplicativos Web": Globe,
+    "Componentes UI": Palette,
     "Full-Stack": Zap,
     Other: Sparkles,
   };
