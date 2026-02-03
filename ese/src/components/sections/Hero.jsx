@@ -26,9 +26,9 @@ const Hero = () => {
           {/*LEFT COLUMN - CONTENT */}
           <div className="text-left space-y-4 md:space-y-6">
             <FadeIn delay={0}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 md:mb-8 border border-lime-500/20 rounded-full">
-                <Star className="w-3 h-3 md:w-4 md:h-4 text-lime-400 fill-lime-400" />
-                <span className="text-xs md:text-sm text-white tracking-wide">
+              <div className="inline-flex items-center gap-2 px-4 py-2 mt-16 md:mt-20 mb-4 md:mb-8 border border-lime-500/20 rounded-full max-w-full overflow-hidden">
+                <Star className="w-3 h-3 md:w-4 md:h-4 text-lime-400 fill-lime-400 flex-shrink-0" />
+                <span className="text-xs md:text-sm text-white tracking-wide truncate">
                   {PERSONAL_INFO.title}
                 </span>
               </div>
