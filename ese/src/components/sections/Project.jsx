@@ -15,7 +15,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import ProjectCard from "../ui/ProjectCard";
+import ProjectCard from "../UI/ProjectCard";
 
 const Project = () => {
   const [activateCategory, setActivateCategory] = React.useState("Todos");
