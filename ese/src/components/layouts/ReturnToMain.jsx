@@ -1,17 +1,11 @@
 import React from 'react'
 
 const ReturnToMain = () => {
-  const mainSiteUrl = 'https://my-website-beta-lovat.vercel.app/'
-
   return (
     <a
-      href={mainSiteUrl}
+      href='/'
       aria-label='voltar ao site'
-      onClick={(event) => {
-        event.preventDefault()
-        window.location.href = mainSiteUrl
-      }}
-      className='fixed top-6 left-6 z-50 inline-flex items-center gap-2 px-3 py-2 rounded-fulltext-white shadow-lg hover:bg-lime-400 cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-300'
+      className='fixed top-6 left-6 z-50 inline-flex items-center gap-2 px-3 py-2 rounded-full text-white shadow-lg hover:bg-lime-400 cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-300'
     >
       <svg
         className='w-5 h-5'
