@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
+import ReturnToMain from './components/layouts/ReturnToMain'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Technolgy from './components/sections/Technolgy'
@@ -16,6 +17,7 @@ function App() {
   return (
       <>
       <div className='min-h-screen bg-black'>
+        <ReturnToMain />
         <Navbar />
         <main>
           <Hero />
