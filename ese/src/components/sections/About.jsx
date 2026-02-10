@@ -65,9 +65,9 @@ const About = () => {
                   const IconComponent = iconMap[index] || Code2;
                   
                   return (
-                    <div key={index} className='relative p-4 md:p-5 border border-lime-500/10 rounded-xl hover:border-lime-500/30 transition-all duration-300 hover:bg-lime-500/5 group bg-white/[0.02]'>
+                    <div key={index} className='relative p-4 md:p-5 border border-lime-500/10 rounded-xl hover:border-lime-500/30 transition-all duration-300 hover:bg-lime-500/5 group bg-white/2'>
                       <div className='flex items-start gap-3 mb-3'>
-                        <div className='flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-lime-400/10 border border-lime-400/20 flex items-center justify-center group-hover:bg-lime-400/20 group-hover:scale-110 transition-all duration-300'>
+                        <div className='shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-lime-400/10 border border-lime-400/20 flex items-center justify-center group-hover:bg-lime-400/20 group-hover:scale-110 transition-all duration-300'>
                           <IconComponent className='w-5 h-5 md:w-6 md:h-6 text-lime-400' />
                         </div>
                         <div className='flex-1 min-w-0'>

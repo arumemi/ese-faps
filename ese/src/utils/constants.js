@@ -18,10 +18,10 @@ export const SOCIAL_LINKS = {
     instagram: 'https://www.instagram.com/easy_ese_1/',
 };
 export const STATS = [
-    { label: 'Anos de Experiência', value: '2+' },
-    { label: 'Projetos Concluídos', value: '8+' },
-    { label: 'Clientes Satisfeitos', value: '5+' },
-    { label: 'Tecnologias Usadas', value: '10+' },
+    { label: 'Anos de Experiência', value: '4+' },
+    { label: 'Projetos Concluídos', value: '120+' },
+    { label: 'Clientes Satisfeitos', value: '50+' },
+    { label: 'Tecnologias Usadas', value: '15+' },
 ];
 
 export const ABOUT_STATS = [
