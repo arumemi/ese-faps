@@ -26,7 +26,7 @@ const ReturnToMain = () => {
         <path d='M19 12H5' />
         <path d='M12 19l-7-7 7-7' />
       </svg>
-      <span className='text-sm font-medium'>voltar</span>
+      <span className='text-sm font-medium'>voltar.</span>
     </a>
   )
 }
