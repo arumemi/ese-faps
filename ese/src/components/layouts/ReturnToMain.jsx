@@ -4,7 +4,7 @@ const ReturnToMain = () => {
   return (
     <a
       href='/'
-      aria-label='voltar ao site'
+      aria-label='voltar'
       className='fixed top-6 left-6 z-50 inline-flex items-center gap-2 px-3 py-2 rounded-full text-white shadow-lg hover:bg-lime-400 cursor-pointer transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lime-300'
     >
       <svg
@@ -20,9 +20,9 @@ const ReturnToMain = () => {
         <path d='M19 12H5' />
         <path d='M12 19l-7-7 7-7' />
       </svg>
-      <span className='text-sm font-medium'>voltar.</span>
+      <span className='text-sm font-medium'></span>
     </a>
   )
 }
 
-export default ReturnToMain
+export default Return

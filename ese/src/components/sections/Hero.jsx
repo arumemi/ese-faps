@@ -12,7 +12,6 @@ import { PERSONAL_INFO, STATS } from "../../utils/constants";
 import { scrollToSection } from "../../utils/scrollToSection";
 import FadeIn from "../animation/FadeIn";
 import RadialGradientBackground from "../background/RadiaGradientBackground";
-import heroImage from "../../assets/esse.jpeg";
 
 const Hero = () => {
   return (
@@ -86,7 +85,7 @@ const Hero = () => {
                 {/**image container */}
                 <div className="relative rounded-2xl overflow-hidden m-0.5 h-[calc(100%-2px)]">
                   <img
-                    src={heroImage}
+                    src="/images/6.JPG"
                     alt="Ese Fapohunda - React Developer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
