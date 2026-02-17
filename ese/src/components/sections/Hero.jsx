@@ -85,7 +85,7 @@ const Hero = () => {
                 {/**image container */}
                 <div className="relative rounded-2xl overflow-hidden m-0.5 h-[calc(100%-2px)]">
                   <img
-                    src="/public/images/hero.jpeg"
+                    src="/images/hero.jpeg"
                     alt="Ese Fapohunda - React Developer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
