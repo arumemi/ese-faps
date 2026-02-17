@@ -126,18 +126,11 @@ const Hero = () => {
           </FadeIn>
         </div>
       </div>
-      {/**scroll indicator */}
+    
 
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <button
-          onClick={() => scrollToSection("about")}
-          className="flex flex-col items-center gap-1 md:gap-2 text-lime-400 hover:text-yellow-400 transition-colors group"
-          aria-label="Scroll to next section"
-        >
-          <ChevronDown className="w-6 h-6 md:w-8 md:h-8 animate-bounce group-hover:animate-none" />
-          
-        </button>
-      </div>
+      
+        
+   
     </section>
   );
 };
