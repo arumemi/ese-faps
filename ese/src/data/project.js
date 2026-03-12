@@ -3,6 +3,7 @@ import berber from '../assets/berber.jpeg'
 import phone from '../assets/phone.jpeg'
 import resturant from '../assets/resturant.jpeg'
 
+
 export const projects = [ 
   {
     id: 1,
@@ -60,6 +61,16 @@ export const projects = [
    
     githubUrl: 'https://github.com/Ese-Fapo/resturant-templete.git',
   },
+  {
+    id: 6,
+    title: 'Budget Tracker',
+    description: 'Aplicativo móvel para rastreamento de despesas e orçamento',
+    imageUrl: '/images/budget.jpeg',
+    category: 'Aplicativos Móveis',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    projectUrl: 'https://budget-eight-bay.vercel.app/',
+    githubUrl: 'https://github.com/Ese-Fapo/Budget.git',
+  }
   
 
 ];
