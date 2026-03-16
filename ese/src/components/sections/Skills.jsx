@@ -3,11 +3,14 @@ import { Technology } from "../../data/Tecnology";
 import FadeIn from "../animation/FadeIn";
 import * as Icons from "lucide-react";
 import RadialGradientBackground from "../background/RadiaGradientBackground";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   //category skills mapping
   const skillCategories = {
-    "Desenvolvimento Front-End": [
+    [t("skillsSection.categories.frontend")]: [
       Technology.find((s) => s.name === "JavaScript"),
       Technology.find((s) => s.name === "React.js"),
       Technology.find((s) => s.name === "TypeScript"),
@@ -17,12 +20,12 @@ const Skills = () => {
       Technology.find((s) => s.name === "Tailwind CSS"),
       Technology.find((s) => s.name === "Redux"),
     ].filter(Boolean),
-    "Backend & APIs": [
+    [t("skillsSection.categories.backend")]: [
       Technology.find((s) => s.name === "Node.js"),
       Technology.find((s) => s.name === "MongoDB"),
       Technology.find((s) => s.name === "REST API"),
     ].filter(Boolean),
-    "Ferramentas & Plataformas": [
+    [t("skillsSection.categories.tools")]: [
       Technology.find((s) => s.name === "Git & GitHub"),
       Technology.find((s) => s.name === "CI CD & DevOps"),
       Technology.find((s) => s.name === "Vite"),
@@ -32,22 +35,38 @@ const Skills = () => {
 
   // get proficiency percentage
   const getProficiencyPercentage = (level) => {
+    const normalized = String(level || "").toLowerCase();
     const levels = {
-      Especialista: 95,
-      Avançado: 80,
-      Intermediário: 65,
+      especialista: 95,
+      expert: 95,
+      avançado: 80,
+      advanced: 80,
+      intermediário: 65,
+      intermediate: 65,
     };
-    return levels[level] || 50;
+    return levels[normalized] || 50;
+  };
+
+  const getTranslatedLevel = (level) => {
+    const normalized = String(level || "").toLowerCase();
+    if (normalized === "especialista" || normalized === "expert") return t("skillsSection.levels.expert");
+    if (normalized === "avançado" || normalized === "advanced") return t("skillsSection.levels.advanced");
+    if (normalized === "intermediário" || normalized === "intermediate") return t("skillsSection.levels.intermediate");
+    return level;
   };
 
   //get levels color
   const getLevelColor = (level) => {
+    const normalized = String(level || "").toLowerCase();
     const colors = {
-      Especialista: "text-[#8DFF69] bg-[#8DFF69]/20 border-[#8DFF69]/40",
-      Avançado: "text-cyan-400 bg-cyan-500/20 border-cyan-500/40",
-      Intermediário: "text-emerald-400 bg-emerald-500/20 border-emerald-500/40",
+      especialista: "text-[#8DFF69] bg-[#8DFF69]/20 border-[#8DFF69]/40",
+      expert: "text-[#8DFF69] bg-[#8DFF69]/20 border-[#8DFF69]/40",
+      avançado: "text-cyan-400 bg-cyan-500/20 border-cyan-500/40",
+      advanced: "text-cyan-400 bg-cyan-500/20 border-cyan-500/40",
+      intermediário: "text-emerald-400 bg-emerald-500/20 border-emerald-500/40",
+      intermediate: "text-emerald-400 bg-emerald-500/20 border-emerald-500/40",
     };
-    return colors[level] || "text-gray-500 bg-gray-500/20 border-gray-500/40";
+    return colors[normalized] || "text-gray-500 bg-gray-500/20 border-gray-500/40";
   };
 
   return (
@@ -62,10 +81,10 @@ const Skills = () => {
         <FadeIn delay={0}>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4">
-              Habilidades e Expertise
+              {t("skillsSection.title")}
             </h2>
             <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-              Visão organizada das minhas habilidades técnicas em diferentes domínios
+              {t("skillsSection.description")}
             </p>
           </div>
         </FadeIn>
@@ -109,7 +128,7 @@ const Skills = () => {
                                 skill.level
                               )}`}
                             >
-                              {skill.level}
+                              {getTranslatedLevel(skill.level)}
                             </span>
                           </div>
 

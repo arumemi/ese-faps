@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "technology": "Tecnologia",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "services": "Serviços",
+    "contact": "Contato",
+    "hireMe": "Contrate-me",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Desenvolvedor React & Entusiasta UI/UX || Disponível para trabalho",
+    "title": "Desenvolvedor Front-End | <react>React</react> | Entusiasta <uiux>UI/UX</uiux>",
+    "description": "Construindo aplicações modernas e escaláveis com React, Next.js, Tailwind CSS, Node.js e outras tecnologias de ponta. Transformando ideias em realidade.",
+    "contactCta": "Entre em Contato",
+    "stats": {
+      "experience": "Anos de Experiência",
+      "projects": "Projetos Concluídos",
+      "clients": "Clientes Satisfeitos",
+      "technologies": "Tecnologias Usadas"
+    }
+  },
+  "footer": {
+    "tagline": "Criando experiências web perfeitas com React.js",
+    "quickLinks": "Links Rápidos",
+    "services": "Serviços",
+    "contact": "Contato",
+    "webDev": "Desenvolvimento Web",
+    "mobileDev": "Desenvolvimento de Aplicativos Móveis",
+    "uiux": "Design UI/UX",
+    "performance": "Otimização de Desempenho",
+    "rightsReserved": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "inBrazil": "no Brasil",
+    "scrollToTop": "Voltar ao topo"
+  },
+  "whatsapp": {
+    "defaultMessage": "Olá! Vim pelo seu portfólio e gostaria de conversar.",
+    "aria": "Falar no WhatsApp",
+    "title": "Falar no WhatsApp"
+  },
+  "about": {
+    "badge": "Desenvolvedor Full-Stack",
+    "title": "Criando Experiências Digitais Incríveis",
+    "bio": "Desenvolvedor React apaixonado com 1+ anos de experiência na criação de aplicações web dinâmicas e responsivas. Hábil em traduzir mockups de design em código de alta qualidade, otimizar desempenho e garantir compatibilidade entre navegadores. Comprometido com aprendizado contínuo e atualização com as últimas tendências da indústria para entregar soluções de ponta.",
+    "downloadResume": "Baixar Currículo",
+    "stats": {
+      "frontEnd": { "value": "Especialista em Front-End", "label": "Focado em desenvolvimento React & UI moderno" },
+      "detail": { "value": "Orientado por Detalhes", "label": "Layouts perfeitos em pixels & interações suaves" },
+      "improving": { "value": "Sempre Melhorando", "label": "Aprendendo constantemente novas ferramentas e melhores práticas" },
+      "collaboration": { "value": "Fácil de Trabalhar", "label": "Comunicação clara e colaboração" },
+      "reliable": { "value": "Confiável", "label": "Entrega projetos no prazo" },
+      "maintainable": { "value": "Código Sustentável", "label": "Componentes reutilizáveis e arquitetura limpa" }
+    }
+  },
+  "contact": {
+    "badge": "Entre em Contato",
+    "title": "Vamos Trabalhar Juntos",
+    "description": "Tem um projeto em mente? Eu adoraria ouvir você. Envie-me uma mensagem e responderei o mais rápido possível.",
+    "infoTitle": "Informações de Contato",
+    "followMe": "Me Siga",
+    "successTitle": "Mensagem Enviada!",
+    "successBody": "Obrigado por entrar em contato. Responderei em breve.",
+    "labels": {
+      "phone": "Telefone",
+      "location": "Localização",
+      "name": "Seu Nome",
+      "email": "Seu Email",
+      "subject": "Assunto",
+      "message": "Mensagem"
+    },
+    "placeholders": {
+      "name": "João Silva",
+      "email": "joao@exemplo.com",
+      "subject": "Consulta de Projeto",
+      "message": "Fale-me sobre seu projeto..."
+    },
+    "send": "Enviar Mensagem"
+  },
+  "servicesSection": {
+    "badge": "O Que Ofereço",
+    "title": "Construído para inovação. Projetado para resultados",
+    "description": "Ofereço uma ampla gama de serviços para ajudar empresas a estabelecer uma forte presença online e atingir seus objetivos digitais.",
+    "cards": {
+      "1": { "title": "Desenvolvimento Web", "description": "Criando sites responsivos e dinâmicos usando tecnologias modernas." },
+      "2": { "title": "Desenvolvimento de Aplicativos Móveis", "description": "Criando aplicações móveis amigáveis e mobile first para plataformas Android e iOS." },
+      "3": { "title": "Design UI/UX", "description": "Projetando interfaces de usuário intuitivas e envolventes para aplicações web e móveis." },
+      "4": { "title": "Desenvolvimento de Componentes Personalizados", "description": "Desenvolvendo componentes de UI reutilizáveis e personalizáveis para várias aplicações." },
+      "5": { "title": "Otimização de Desempenho", "description": "Melhorando o desempenho e velocidade de aplicações web e móveis." },
+      "6": { "title": "Melhorias de Segurança", "description": "Implementando as melhores práticas de segurança para proteger aplicações de vulnerabilidades." }
+    }
+  },
+  "projectsSection": {
+    "badge": "Meu Trabalho",
+    "title": "Projetos Em Destaque",
+    "description": "Explore uma seleção dos meus projetos recentes, mostrando minhas habilidades em desenvolvimento web e design.",
+    "categories": {
+      "all": "Todos",
+      "webApps": "Aplicativos Web",
+      "mobileApps": "Aplicativos Móveis",
+      "ecommerce": "E-commerce",
+      "fullStack": "Full-Stack"
+    },
+    "descriptions": {
+      "1": "Plataforma de intercâmbio estudantil",
+      "2": "Plataforma de blog de tecnologia com sistema de autenticação",
+      "3": "Aplicativo móvel para gerenciamento de tarefas",
+      "4": "Uma loja de barbearia online com sistema de agendamento",
+      "5": "Ainda estou trabalhando no backend deste projeto. Estou implementando e publicando por partes, de forma gradual.",
+      "6": "Aplicativo móvel para rastreamento de despesas e orçamento"
+    },
+    "previousProject": "Projeto anterior",
+    "nextProject": "Próximo projeto",
+    "goToSlide": "Ir para o slide"
+  },
+  "skillsSection": {
+    "title": "Habilidades e Expertise",
+    "description": "Visão organizada das minhas habilidades técnicas em diferentes domínios",
+    "categories": {
+      "frontend": "Desenvolvimento Front-End",
+      "backend": "Backend & APIs",
+      "tools": "Ferramentas & Plataformas"
+    },
+    "levels": {
+      "expert": "Especialista",
+      "advanced": "Avançado",
+      "intermediate": "Intermediário"
+    }
+  },
+  "technologySection": {
+    "badge": "Habilidades Técnicas",
+    "title": "Tecnologias e Ferramentas",
+    "description": "Uma visão geral de minha experiência técnica e níveis de proficiência"
+  },
+  "projectCard": {
+    "liveDemo": "Demo",
+    "code": "Código",
+    "openLiveDemoFor": "Abrir demo para",
+    "openSourceCodeFor": "Abrir código-fonte para"
+  }
+}

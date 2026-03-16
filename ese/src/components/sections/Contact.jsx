@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Instagram, Send, CheckCircle } from 'lucide-react'
 import { PERSONAL_INFO, SOCIAL_LINKS } from '../../utils/constants'
 import FadeIn from '../animation/FadeIn'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,7 +26,7 @@ const Contact = () => {
     
     // Create mailto link with form data
     const mailtoLink = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `${t('contact.labels.name')}: ${formData.name}\n${t('contact.labels.email')}: ${formData.email}\n\n${t('contact.labels.message')}:\n${formData.message}`
     )}`
     
     // Open email client
@@ -48,13 +50,13 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      label: 'Telefone',
+      label: t('contact.labels.phone'),
       value: PERSONAL_INFO.phone,
       href: `tel:${PERSONAL_INFO.phone}`
     },
     {
       icon: MapPin,
-      label: 'Localização',
+      label: t('contact.labels.location'),
       value: PERSONAL_INFO.location,
       href: null
     }
@@ -92,13 +94,13 @@ const Contact = () => {
           <div className='text-center mb-16'>
             <div className='flex items-center justify-center gap-2 bg-primary/10 mb-4 border border-primary/30 rounded-full px-4 py-2 mx-auto w-max'>
               <Mail className='w-5 h-5 text-primary'/>
-              <span className='text-primary font-medium'>Entre em Contato</span>
+              <span className='text-primary font-medium'>{t('contact.badge')}</span>
             </div>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              Vamos Trabalhar Juntos
+              {t('contact.title')}
             </h2>
             <p className='text-gray-400 text-lg max-w-2xl mx-auto'>
-              Tem um projeto em mente? Eu adoraria ouvir você. Envie-me uma mensagem e responderei o mais rápido possível.
+              {t('contact.description')}
             </p>
           </div>
         </FadeIn>
@@ -108,7 +110,7 @@ const Contact = () => {
           <div className='lg:col-span-1 space-y-6'>
             <FadeIn delay={100}>
               <div className='bg-gray-900/80 sm:bg-gray-900/50 border border-gray-700 sm:border-gray-800 rounded-lg p-6 ring-1 ring-white/10 sm:ring-0'>
-                <h3 className='text-xl font-bold sm:font-semibold text-white mb-6 tracking-tight'>Informações de Contato</h3>
+                <h3 className='text-xl font-bold sm:font-semibold text-white mb-6 tracking-tight'>{t('contact.infoTitle')}</h3>
                 <div className='space-y-4'>
                   {contactInfo.map((item, index) => (
                     <div key={index} className='flex items-start gap-4'>
@@ -136,7 +138,7 @@ const Contact = () => {
 
             <FadeIn delay={200}>
               <div className='bg-gray-900/80 sm:bg-gray-900/50 border border-gray-700 sm:border-gray-800 rounded-lg p-6 ring-1 ring-white/10 sm:ring-0'>
-                <h3 className='text-xl font-bold sm:font-semibold text-white mb-6 tracking-tight'>Me Siga</h3>
+                <h3 className='text-xl font-bold sm:font-semibold text-white mb-6 tracking-tight'>{t('contact.followMe')}</h3>
                 <div className='flex gap-3'>
                   {socialLinks.map((social, index) => (
                     <a
@@ -162,15 +164,15 @@ const Contact = () => {
                 {isSubmitted ? (
                   <div className='flex flex-col items-center justify-center py-12'>
                     <CheckCircle className='w-16 h-16 text-primary mb-4'/>
-                    <h3 className='text-2xl font-bold text-white mb-2'>Mensagem Enviada!</h3>
-                    <p className='text-gray-300 sm:text-gray-400 text-center font-medium sm:font-normal'>Obrigado por entrar em contato. Responderei em breve.</p>
+                    <h3 className='text-2xl font-bold text-white mb-2'>{t('contact.successTitle')}</h3>
+                    <p className='text-gray-300 sm:text-gray-400 text-center font-medium sm:font-normal'>{t('contact.successBody')}</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className='space-y-6'>
                     <div className='grid md:grid-cols-2 gap-6'>
                       <div>
                         <label htmlFor='name' className='block text-sm font-semibold text-gray-200 sm:font-medium sm:text-gray-300 mb-2'>
-                          Seu Nome
+                          {t('contact.labels.name')}
                         </label>
                         <input
                           type='text'
@@ -180,12 +182,12 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           className='w-full px-4 py-3 bg-gray-800/70 sm:bg-gray-800/50 border border-gray-600 sm:border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-medium sm:font-normal'
-                          placeholder='João Silva'
+                          placeholder={t('contact.placeholders.name')}
                         />
                       </div>
                       <div>
                         <label htmlFor='email' className='block text-sm font-semibold text-gray-200 sm:font-medium sm:text-gray-300 mb-2'>
-                          Seu Email
+                          {t('contact.labels.email')}
                         </label>
                         <input
                           type='email'
@@ -195,13 +197,13 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           className='w-full px-4 py-3 bg-gray-800/70 sm:bg-gray-800/50 border border-gray-600 sm:border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-medium sm:font-normal'
-                          placeholder='joao@exemplo.com'
+                          placeholder={t('contact.placeholders.email')}
                         />
                       </div>
                     </div>
                     <div>
                       <label htmlFor='subject' className='block text-sm font-semibold text-gray-200 sm:font-medium sm:text-gray-300 mb-2'>
-                        Assunto
+                        {t('contact.labels.subject')}
                       </label>
                       <input
                         type='text'
@@ -211,12 +213,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className='w-full px-4 py-3 bg-gray-800/70 sm:bg-gray-800/50 border border-gray-600 sm:border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-medium sm:font-normal'
-                        placeholder='Consulta de Projeto'
+                        placeholder={t('contact.placeholders.subject')}
                       />
                     </div>
                     <div>
                       <label htmlFor='message' className='block text-sm font-semibold text-gray-200 sm:font-medium sm:text-gray-300 mb-2'>
-                        Mensagem
+                        {t('contact.labels.message')}
                       </label>
                       <textarea
                         id='message'
@@ -226,14 +228,14 @@ const Contact = () => {
                         required
                         rows='6'
                         className='w-full px-4 py-3 bg-gray-800/70 sm:bg-gray-800/50 border border-gray-600 sm:border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all resize-none font-medium sm:font-normal'
-                        placeholder='Fale-me sobre seu projeto...'
+                        placeholder={t('contact.placeholders.message')}
                       ></textarea>
                     </div>
                     <button
                       type='submit'
                       className='w-full md:w-auto px-8 py-3 bg-primary text-black font-bold md:font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2'
                     >
-                      <span>Enviar Mensagem</span>
+                      <span>{t('contact.send')}</span>
                       <Send className='w-5 h-5'/>
                     </button>
                   </form>

@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
 import ReturnToMain from './components/layouts/ReturnToMain'
+import FloatingWhatsApp from './components/layouts/FloatingWhatsApp'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Technolgy from './components/sections/Technolgy'
@@ -18,6 +19,7 @@ function App() {
       <>
       <div className='min-h-screen bg-black'>
         <ReturnToMain />
+        <FloatingWhatsApp />
         <Navbar />
         <main>
           <Hero />

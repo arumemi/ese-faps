@@ -1,8 +1,10 @@
 import React from 'react'
 import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Instagram, Heart, ArrowUp, Wrench } from 'lucide-react'
-import { PERSONAL_INFO, SOCIAL_LINKS, Nav_links } from '../../utils/constants'
+import { PERSONAL_INFO, SOCIAL_LINKS } from '../../utils/constants'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   const scrollToSection = (sectionId) => {
@@ -24,10 +26,10 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { label: 'Sobre', id: 'about' },
-    { label: 'Habilidades', id: 'skills' },
-    { label: 'Projetos', id: 'projects' },
-    { label: 'Serviços', id: 'services' }
+    { label: t('nav.about'), id: 'about' },
+    { label: t('nav.skills'), id: 'skills' },
+    { label: t('nav.projects'), id: 'projects' },
+    { label: t('nav.services'), id: 'services' }
   ]
 
   return (
@@ -64,7 +66,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 text-sm">
-              {PERSONAL_INFO.tagline}
+              {t('footer.tagline')}
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
@@ -84,7 +86,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Links Rápidos</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -101,21 +103,21 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Serviços</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400 text-sm">Desenvolvimento Web</li>
-              <li className="text-gray-400 text-sm">Desenvolvimento de Aplicativos Móveis</li>
-              <li className="text-gray-400 text-sm">Design UI/UX</li>
-              <li className="text-gray-400 text-sm">Otimização de Desempenho</li>
+              <li className="text-gray-400 text-sm">{t('footer.webDev')}</li>
+              <li className="text-gray-400 text-sm">{t('footer.mobileDev')}</li>
+              <li className="text-gray-400 text-sm">{t('footer.uiux')}</li>
+              <li className="text-gray-400 text-sm">{t('footer.performance')}</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contato</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
-                <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <a 
                   href={`mailto:${PERSONAL_INFO.email}`}
                   className="text-gray-400 hover:text-primary transition-colors text-sm break-all"
@@ -124,7 +126,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <a 
                   href={`tel:${PERSONAL_INFO.phone}`}
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
@@ -133,7 +135,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-gray-400 text-sm">
                   {PERSONAL_INFO.location}
                 </span>
@@ -146,13 +148,13 @@ const Footer = () => {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} {PERSONAL_INFO.name}. Todos os direitos reservados. Feito com{' '}
-              <Heart className="inline w-4 h-4 text-red-500 fill-red-500" /> no Brasil
+              © {currentYear} {PERSONAL_INFO.name}. {t('footer.rightsReserved')} {t('footer.madeWith')}{' '}
+              <Heart className="inline w-4 h-4 text-red-500 fill-red-500" /> {t('footer.inBrazil')}
             </p>
             <button
               onClick={scrollToTop}
               className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center border border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
-              aria-label="Scroll to top"
+              aria-label={t('footer.scrollToTop')}
             >
               <ArrowUp className="w-5 h-5 text-primary" />
             </button>

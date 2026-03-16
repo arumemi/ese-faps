@@ -1,11 +1,22 @@
 import React from 'react'
 import {Download, Code2, Sparkles, Target, Eye, TrendingUp, Users, Clock, FileCode} from 'lucide-react'
-import {PERSONAL_INFO, ABOUT_STATS} from '../../utils/constants'
+import {PERSONAL_INFO} from '../../utils/constants'
+import { useTranslation } from 'react-i18next'
 
 import FadeIn from '../animation/FadeIn'
 
 
 const About = () => {
+  const { t } = useTranslation()
+  const aboutStats = [
+    t('about.stats.frontEnd', { returnObjects: true }),
+    t('about.stats.detail', { returnObjects: true }),
+    t('about.stats.improving', { returnObjects: true }),
+    t('about.stats.collaboration', { returnObjects: true }),
+    t('about.stats.reliable', { returnObjects: true }),
+    t('about.stats.maintainable', { returnObjects: true }),
+  ]
+
   return (
     <section id="about" className='relative min-h-screen py-12 md:py-20 bg-black overflow-hidden'>
        
@@ -17,20 +28,20 @@ const About = () => {
               <FadeIn delay={60}>
                 <div className='inline-flex items-center gap-2.5 px-4 py-2 md:px-5 md:py-2.5 border border-lime-500/20 rounded-full hover:bg-lime-500/10 transition-colors w-fit bg-lime-500/5'>
                   <Code2 className='w-3 h-3 md:w-4 md:h-4 text-lime-400' />
-                  <span className='text-xs md:text-sm text-lime-300 font-medium'>Desenvolvedor Full-Stack</span>
+                  <span className='text-xs md:text-sm text-lime-300 font-medium'>{t('about.badge')}</span>
                   <Sparkles className='w-3 h-3 md:w-4 md:h-4 text-yellow-400 animate-pulse' />
                 </div>
               </FadeIn>
               
               <FadeIn delay={100}>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight'>
-                  Criando Experiências Digitais Incríveis
+                  {t('about.title')}
                 </h2>
               </FadeIn>
               
               <FadeIn delay={200}>
                 <div className='flex flex-col gap-3 md:gap-4'>
-                  {PERSONAL_INFO.bio.map((paragraph, index) => (
+                  {[t('about.bio')].map((paragraph, index) => (
                     <p key={index} className='text-sm sm:text-base text-gray-300 leading-relaxed'>
                       {paragraph}
                     </p>
@@ -44,7 +55,7 @@ const About = () => {
                   className='inline-flex items-center justify-center gap-3 bg-lime-400 hover:bg-lime-300 text-black rounded-lg px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-lime-400/20 w-full sm:w-fit group'
                 >
                   <Download className='w-4 h-4 md:w-5 md:h-5 group-hover:animate-bounce' />
-                  <span>Baixar Currículo</span>
+                  <span>{t('about.downloadResume')}</span>
                 </button>
               </FadeIn>
             </div>
@@ -52,7 +63,7 @@ const About = () => {
             {/**right column - stats */}
             <FadeIn delay={300}>
               <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 mt-8 lg:mt-0'>
-                {ABOUT_STATS.map((stat, index) => {
+                {aboutStats.map((stat, index) => {
                   // Icon mapping based on index or value
                   const iconMap = [
                     Target,      // Front-End Specialist

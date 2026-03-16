@@ -2,11 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Nav_links, PERSONAL_INFO } from "../../utils/constants";
 import { useScrollSpy } from "../../hooks/UseScrollSpy";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
   const activeSection = useScrollSpy(Nav_links.map((link) => link.id));
+  const navLinks = Nav_links.map((link) => ({
+    ...link,
+    title: t(`nav.${link.id}`),
+  }));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +40,34 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+    setIsOpen(false);
+  };
+
+  const LanguageSwitch = ({ compact = false }) => (
+    <div className={`flex items-center gap-1 border border-amber-400/30 rounded-full p-1 bg-black/20 ${compact ? 'scale-95' : ''}`}>
+      <button
+        onClick={() => handleLanguageChange("pt")}
+        className={`px-2 py-1 text-xs rounded-full transition-colors ${
+          i18n.resolvedLanguage === "pt" ? "bg-amber-400 text-black" : "text-white hover:text-amber-400"
+        }`}
+        aria-label={t("nav.language") + ": Português"}
+      >
+        PT
+      </button>
+      <button
+        onClick={() => handleLanguageChange("en")}
+        className={`px-2 py-1 text-xs rounded-full transition-colors ${
+          i18n.resolvedLanguage === "en" ? "bg-amber-400 text-black" : "text-white hover:text-amber-400"
+        }`}
+        aria-label={t("nav.language") + ": English"}
+      >
+        EN
+      </button>
+    </div>
+  );
+
   return (
     <nav
       className={`fixed w-full z-1000 top-0 left-0 right-0 py-4 transition-all duration-300 ${
@@ -60,7 +94,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
 
           <div className="hidden md:flex items-center gap-4 lg:gap-7">
-            {Nav_links.map((link) => (
+            {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavLinkClick(link.id)}
@@ -81,25 +115,28 @@ const Navbar = () => {
               onClick={() => handleNavLinkClick("contact")}
               className="px-3 lg:px-4 py-2 bg-white text-[#121212] text-sm lg:text-base font-medium rounded-[17px] border border-white hover:opacity-90 transition-all duration-300"
             >
-              Contrate-me
+              {t("nav.hireMe")}
+            </button>
+            <LanguageSwitch />
+          </div>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitch compact />
+            {/*mobile menu btn */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-md text-amber-400 hover:bg-yellow-950 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-400"
+              aria-label="Toggle Menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? <X size={20} /> : <Menu size={20} className="" />}
             </button>
           </div>
-          {/*mobile menu btn */}
-        
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-amber-400 hover:bg-yellow-950 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-400"
-            aria-label="Toggle Menu"
-            aria-expanded={isOpen}
-          >
-            {isOpen ? <X size={20} /> : <Menu size={20} className="" />}
-          </button>
         </div>
 
         {/* Mobile Menu */}
         <div className={`md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden border-t border-amber-400/20 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="flex flex-col items-stretch px-4 py-4">
-          {Nav_links.map((link) => (
+          {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => handleNavLinkClick(link.id)}
@@ -118,7 +155,7 @@ const Navbar = () => {
             onClick={() => handleNavLinkClick('contact')} 
             className="w-full px-7 py-3 text-black bg-white font-medium text-base rounded-lg border border-white hover:opacity-90 transition-all duration-300 mt-2"
           >
-            Hire Me
+            {t("nav.hireMe")}
           </button>
         </div>
       </div>

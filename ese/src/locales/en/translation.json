@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "about": "About",
+    "technology": "Technology",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "hireMe": "Hire Me",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "React Developer & UI/UX Enthusiast || Open to work",
+    "title": "Front-End Developer | <react>React</react> | <uiux>UI/UX</uiux> Enthusiast",
+    "description": "Building modern, scalable applications with React, Next.js, Tailwind CSS, Node.js, and other cutting-edge technologies. Turning ideas into reality.",
+    "contactCta": "Get in Touch",
+    "stats": {
+      "experience": "Years of Experience",
+      "projects": "Completed Projects",
+      "clients": "Satisfied Clients",
+      "technologies": "Technologies Used"
+    }
+  },
+  "footer": {
+    "tagline": "Crafting seamless web experiences with React.js",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "webDev": "Web Development",
+    "mobileDev": "Mobile App Development",
+    "uiux": "UI/UX Design",
+    "performance": "Performance Optimization",
+    "rightsReserved": "All rights reserved.",
+    "madeWith": "Made with",
+    "inBrazil": "in Brazil",
+    "scrollToTop": "Scroll to top"
+  },
+  "whatsapp": {
+    "defaultMessage": "Hi! I found you through your portfolio and would like to talk.",
+    "aria": "Chat on WhatsApp",
+    "title": "Chat on WhatsApp"
+  },
+  "about": {
+    "badge": "Full-Stack Developer",
+    "title": "Crafting Amazing Digital Experiences",
+    "bio": "Passionate React developer with 1+ years of experience building dynamic and responsive web applications. Skilled in transforming design mockups into high-quality code, optimizing performance, and ensuring cross-browser compatibility. Committed to continuous learning and staying up to date with the latest industry trends to deliver cutting-edge solutions.",
+    "downloadResume": "Download Resume",
+    "stats": {
+      "frontEnd": { "value": "Front-End Specialist", "label": "Focused on modern React development & UI" },
+      "detail": { "value": "Detail-Oriented", "label": "Pixel-perfect layouts & smooth interactions" },
+      "improving": { "value": "Always Improving", "label": "Continuously learning new tools and best practices" },
+      "collaboration": { "value": "Easy to Work With", "label": "Clear communication and collaboration" },
+      "reliable": { "value": "Reliable", "label": "Delivers projects on time" },
+      "maintainable": { "value": "Maintainable Code", "label": "Reusable components and clean architecture" }
+    }
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Let's Work Together",
+    "description": "Have a project in mind? I'd love to hear from you. Send me a message and I'll get back as soon as possible.",
+    "infoTitle": "Contact Information",
+    "followMe": "Follow Me",
+    "successTitle": "Message Sent!",
+    "successBody": "Thanks for reaching out. I'll reply soon.",
+    "labels": {
+      "phone": "Phone",
+      "location": "Location",
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "email": "john@example.com",
+      "subject": "Project Inquiry",
+      "message": "Tell me about your project..."
+    },
+    "send": "Send Message"
+  },
+  "servicesSection": {
+    "badge": "What I Offer",
+    "title": "Built for innovation. Designed for results",
+    "description": "I offer a wide range of services to help businesses establish a strong online presence and achieve their digital goals.",
+    "cards": {
+      "1": { "title": "Web Development", "description": "Building responsive and dynamic websites using modern technologies." },
+      "2": { "title": "Mobile App Development", "description": "Building user-friendly, mobile-first applications for Android and iOS platforms." },
+      "3": { "title": "UI/UX Design", "description": "Designing intuitive and engaging user interfaces for web and mobile applications." },
+      "4": { "title": "Custom Component Development", "description": "Developing reusable and customizable UI components for various applications." },
+      "5": { "title": "Performance Optimization", "description": "Improving performance and speed for web and mobile applications." },
+      "6": { "title": "Security Improvements", "description": "Implementing security best practices to protect applications from vulnerabilities." }
+    }
+  },
+  "projectsSection": {
+    "badge": "My Work",
+    "title": "Featured Projects",
+    "description": "Explore a selection of my recent projects, showcasing my skills in web development and design.",
+    "categories": {
+      "all": "All",
+      "webApps": "Web Apps",
+      "mobileApps": "Mobile Apps",
+      "ecommerce": "E-commerce",
+      "fullStack": "Full-Stack"
+    },
+    "descriptions": {
+      "1": "Student exchange platform",
+      "2": "Technology blog platform with authentication system",
+      "3": "Mobile app for task management",
+      "4": "Online barbershop store with booking system",
+      "5": "I am still working on the backend of this project. I am implementing and publishing it in gradual stages.",
+      "6": "Mobile app for expense and budget tracking"
+    },
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
+    "goToSlide": "Go to slide"
+  },
+  "skillsSection": {
+    "title": "Skills and Expertise",
+    "description": "Organized view of my technical skills across different domains",
+    "categories": {
+      "frontend": "Front-End Development",
+      "backend": "Backend & APIs",
+      "tools": "Tools & Platforms"
+    },
+    "levels": {
+      "expert": "Expert",
+      "advanced": "Advanced",
+      "intermediate": "Intermediate"
+    }
+  },
+  "technologySection": {
+    "badge": "Technical Skills",
+    "title": "Technologies and Tools",
+    "description": "An overview of my technical experience and proficiency levels"
+  },
+  "projectCard": {
+    "liveDemo": "Live Demo",
+    "code": "Code",
+    "openLiveDemoFor": "Open live demo for",
+    "openSourceCodeFor": "Open source code for"
+  }
+}

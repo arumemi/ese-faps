@@ -3,8 +3,10 @@ import {services} from '../../data/service'
 import * as Icons from 'lucide-react'
 import { Wrench } from 'lucide-react'
 import FadeIn from '../animation/FadeIn'
+import { useTranslation } from 'react-i18next'
 
 const Service = () => {
+  const { t } = useTranslation()
   return (
     <section id="services" className="relative py-20 bg-black overflow-hidden">
       {/* Background Effects */}
@@ -31,13 +33,13 @@ const Service = () => {
           <div className='text-center mb-16'>
             <div className='flex items-center justify-center gap-2 bg-primary/10 mb-4 border border-primary/30 rounded-full px-4 py-2 mx-auto w-max'>
               <Wrench className='w-5 h-5 text-primary'/>
-              <span className='text-primary font-medium'>O Que Ofereço</span>
+              <span className='text-primary font-medium'>{t('servicesSection.badge')}</span>
             </div>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              Construído para inovação. Projetado para resultados
+              {t('servicesSection.title')}
             </h2>
             <p className='text-gray-400 text-lg max-w-2xl mx-auto'>
-              Ofereço uma ampla gama de serviços para ajudar empresas a estabelecer uma forte presença online e atingir seus objetivos digitais.
+              {t('servicesSection.description')}
             </p>
           </div>
         </FadeIn>
@@ -55,10 +57,10 @@ const Service = () => {
                     </div>
                   </div>
                   <h3 className='text-xl font-bold sm:font-semibold text-white mb-3 tracking-tight'>
-                    {service.title}
+                    {t(`servicesSection.cards.${service.id}.title`, { defaultValue: service.title })}
                   </h3>
                   <p className='text-gray-300 sm:text-gray-400 font-medium sm:font-normal text-sm sm:text-base'>
-                    {service.description}
+                    {t(`servicesSection.cards.${service.id}.description`, { defaultValue: service.description })}
                   </p>
                 </div>
               </FadeIn>

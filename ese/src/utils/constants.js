@@ -2,9 +2,9 @@ import { Stars } from "lucide-react";
 
 export const PERSONAL_INFO = {
     name: 'Ese Fapohunda',
-    title: 'Desenvolvedor React & Entusiasta UI/UX || Aberto a Oportunidades',
+    title: 'Desenvolvedor React & Entusiasta UI/UX || Disponível para trabalho',
     email : 'esefapohunda@gmail.com',
-    phone : '+55 48 98127673',
+    phone : '+55 48 991817031',
     location : 'Florianópolis, Brasil',
     tagline : 'Criando experiências web perfeitas com React.js',
     resume: '/files/Ese_Fapohunda_Resume.pdf',

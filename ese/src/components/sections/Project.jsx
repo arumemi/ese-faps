@@ -16,11 +16,21 @@ import {
   ChevronRight,
 } from "lucide-react";
 import ProjectCard from "../UI/ProjectCard";
+import { useTranslation } from "react-i18next";
 
 const Project = () => {
+  const { t } = useTranslation();
   const [activateCategory, setActivateCategory] = React.useState("Todos");
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const scrollContainerRef = React.useRef(null);
+
+  const categoryLabelKeyMap = {
+    Todos: "all",
+    "Aplicativos Web": "webApps",
+    "Aplicativos Móveis": "mobileApps",
+    "E-commerce": "ecommerce",
+    "Full-Stack": "fullStack",
+  };
 
   const filteredProjects =
     activateCategory === "Todos"
@@ -88,14 +98,13 @@ const Project = () => {
           <div className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/10 border border-primary/30 mb-4 sm:mb-6 text-white rounded-full">
               <Briefcase className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-              <span className="text-xs sm:text-sm font-medium text-primary">Meu Trabalho</span>
+              <span className="text-xs sm:text-sm font-medium text-primary">{t("projectsSection.badge")}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-3 sm:mb-4 px-4">
-              Projetos Em Destaque
+              {t("projectsSection.title")}
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-2xl mx-auto px-4">
-              Explore uma seleção dos meus projetos recentes, mostrando minhas habilidades em
-              desenvolvimento web e design.
+              {t("projectsSection.description")}
             </p>
           </div>
         </FadeIn>
@@ -123,7 +132,7 @@ const Project = () => {
                         : "text-gray-500 group-hover:text-gray-700"
                     } w-3.5 h-3.5 sm:w-4 sm:h-4`,
                   })}
-                <span className="text-xs sm:text-sm whitespace-nowrap">{category}</span>
+                <span className="text-xs sm:text-sm whitespace-nowrap">{t(`projectsSection.categories.${categoryLabelKeyMap[category] || 'all'}`)}</span>
               </div>
               {activateCategory === category && (
                 <div className="absolute inset-0 rounded-full transition-all duration-300 bg-primary opacity-30 z-10"></div>
@@ -147,7 +156,7 @@ const Project = () => {
                   data-project-card
                   className="w-[85vw] sm:w-[70vw] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start snap-always"
                 >
-                  <ProjectCard project={project} />
+                  <ProjectCard project={{ ...project, description: t(`projectsSection.descriptions.${project.id}`, { defaultValue: project.description }) }} />
                 </div>
               ))}
             </div>
@@ -160,7 +169,7 @@ const Project = () => {
                 onClick={prevSlide}
                 disabled={currentIndex === 0}
                 className="hidden md:flex absolute top-1/2 left-0 -translate-y-1/2 -translate-x-2 lg:-translate-x-4 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 active:scale-95 text-white rounded-full duration-300 transition-all disabled:opacity-30 disabled:cursor-not-allowed z-10 touch-manipulation"
-                aria-label="Previous project"
+                aria-label={t("projectsSection.previousProject")}
               >
                 <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
               </button>
@@ -168,7 +177,7 @@ const Project = () => {
                 onClick={nextSlide}
                 disabled={currentIndex >= filteredProjects.length - 1}
                 className="hidden md:flex absolute top-1/2 right-0 -translate-y-1/2 translate-x-2 lg:translate-x-4 items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 active:scale-95 text-white rounded-full duration-300 transition-all disabled:opacity-30 disabled:cursor-not-allowed z-10 touch-manipulation"
-                aria-label="Next project"
+                aria-label={t("projectsSection.nextProject")}
               >
                 <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
               </button>
@@ -189,7 +198,7 @@ const Project = () => {
                       ? "bg-primary w-6 sm:w-8 h-2"
                       : "bg-gray-300 w-2 h-2 hover:bg-gray-500 active:bg-gray-600"
                   }`}
-                  aria-label={`Go to slide ${idx + 1}`}
+                  aria-label={`${t("projectsSection.goToSlide")} ${idx + 1}`}
                 ></button>
               ))}
             </div>
